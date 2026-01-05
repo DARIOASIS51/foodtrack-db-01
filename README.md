@@ -24,3 +24,22 @@ El proyecto está pensado como una simulación de un entorno profesional, utiliz
 - (Próximamente) scripts SQL para:
   - Creación del esquema (`DDL`)
   - Inserción de datos de prueba (`DML`)
+
+## Estructura del repositorio
+
+- `/scripts/`: scripts SQL (DDL) para crear y evolucionar el esquema en SQL Server.
+- `/data/`: archivos CSV utilizados para el análisis y/o carga de datos.
+- `README.md`: descripción general del proyecto y del modelo relacional.
+
+## Modelo relacional (resumen)
+
+Tablas:
+- `foodtrucks`
+- `products` (FK → `foodtrucks`)
+- `locations` (FK → `foodtrucks`)
+- `orders` (FK → `foodtrucks`)
+- `order_items` (FK → `orders`, FK → `products`)
+
+Relaciones principales:
+- Un foodtruck tiene muchos productos, pedidos y ubicaciones.
+- Un pedido tiene múltiples ítems (detalle).

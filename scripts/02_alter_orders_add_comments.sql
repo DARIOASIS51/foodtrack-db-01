@@ -7,3 +7,4 @@ USE FoodTrack;
 ALTER TABLE dbo.orders
 ADD comments VARCHAR(255) NULL;
 
+SELECT * FROM orders;
